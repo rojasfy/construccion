@@ -123,10 +123,9 @@ section {
   background: var(--white);
 
   .logo {
-    @include titleText(2.5rem);
 
     img {
-      width: 16rem;
+      width: 17rem;
     }
   }
 
@@ -727,7 +726,7 @@ section {
   text-align: center;
 
   img {
-    height: 10rem;
+    height: 12rem;
     pointer-events: none;
     user-select: none;
   }
