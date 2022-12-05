@@ -71,6 +71,16 @@ section {
     opacity: 0;
   }
 }
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .header {
   position: sticky;
   top: 0;
@@ -401,6 +411,12 @@ section {
   color: var(--light-color);
   line-height: 2;
   padding-top: 0.5rem;
+}
+.about .box-container .covert {
+  opacity: 0;
+}
+.about .box-container .animate {
+  animation: 1.3s;
 }
 
 .services {

@@ -109,6 +109,18 @@ section {
   }
 }
 
+@keyframes display {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .header {
   position: sticky;
   top: 0;
@@ -123,7 +135,6 @@ section {
   background: var(--white);
 
   .logo {
-
     img {
       width: 17rem;
     }
@@ -372,7 +383,6 @@ section {
 
     &:hover {
       background: var(--leadgray);
-      
     }
   }
 
@@ -380,10 +390,8 @@ section {
   .swiper-button-prev::after {
     font-size: 2rem;
     color: var(--black);
-
   }
 
-  
   .swiper-button-prev {
     right: 7rem;
   }
@@ -436,6 +444,14 @@ section {
         @include graphText(1.5rem);
         padding-top: 0.5rem;
       }
+    }
+
+    .covert {
+      opacity: 0;
+    }
+
+    .animate {
+      animation: 1.3s;
     }
   }
 }
