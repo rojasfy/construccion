@@ -109,7 +109,7 @@ section {
   }
 }
 
-@keyframes display {
+@keyframes view {
   0% {
     opacity: 0;
     transform: translateY(100px);
@@ -436,8 +436,24 @@ section {
       background: var(--light-bg);
       padding: 3rem 2rem;
 
+      .display_increase {
+        display: flex;
+        justify-content: center;
+        h3 {
+          @include titleText(4rem);
+        }
+
+        span {
+          @include titleText(4rem);
+        }
+      }
+
       h3 {
         @include titleText(4rem);
+
+        span {
+          @include titleText(4rem);
+        }
       }
 
       p {
@@ -451,7 +467,7 @@ section {
     }
 
     .animate {
-      animation: 1.3s;
+      animation: view 1.8s;
     }
   }
 }

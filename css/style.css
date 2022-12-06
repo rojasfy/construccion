@@ -71,7 +71,7 @@ section {
     opacity: 0;
   }
 }
-@keyframes display {
+@keyframes view {
   0% {
     opacity: 0;
     transform: translateY(100px);
@@ -401,7 +401,26 @@ section {
   background: var(--light-bg);
   padding: 3rem 2rem;
 }
+.about .box-container .box .display_increase {
+  display: flex;
+  justify-content: center;
+}
+.about .box-container .box .display_increase h3 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.about .box-container .box .display_increase span {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
 .about .box-container .box h3 {
+  font-size: 4rem;
+  color: var(--black);
+  text-transform: capitalize;
+}
+.about .box-container .box h3 span {
   font-size: 4rem;
   color: var(--black);
   text-transform: capitalize;
@@ -416,7 +435,7 @@ section {
   opacity: 0;
 }
 .about .box-container .animate {
-  animation: 1.3s;
+  animation: view 1.8s;
 }
 
 .services {

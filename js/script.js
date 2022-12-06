@@ -43,10 +43,10 @@ addEventListener("DOMContentLoaded", () => {
   const animateCounters = () => {
     for (const counter of counters) {
       const updateCounter = () => {
-        let quantityMax = parseInt(counter.dataset.quantityTotal) ,
+        let quantityMax = parseInt(counter.dataset.quantityTotal),
           value_actual = parseInt(counter.innerText),
-          increase = quantityMax / speed
-     
+          increase = quantityMax / speed;
+
         if (value_actual < quantityMax) {
           counter.innerText = Math.ceil(value_actual + increase);
           setTimeout(updateCounter, 10);
@@ -54,13 +54,28 @@ addEventListener("DOMContentLoaded", () => {
           counter.innerText = quantityMax;
         }
       };
-      updateCounter()
-     
+      updateCounter();
     }
   };
-  animateCounters()
+
+  const showCounter = (items) => {
+    items.forEach((item) => {
+      if (item.isIntersecting) {
+        item.target.classList.add("animate");
+        item.target.classList.remove("covert");
+        setTimeout(animateCounters, 300);
+      }
+    });
+  };
+
+  const observer = new IntersectionObserver(showCounter, {
+    threshold: 1,
+  });
+
+  const elementsHTML = document.querySelectorAll(".counter");
+  elementsHTML.forEach((elementHTML) => observer.observe(elementHTML));
 });
- 
+
 var swiper = new Swiper(".home-slider", {
   loop: true,
   grabCursor: true,
